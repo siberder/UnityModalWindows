@@ -28,6 +28,7 @@ SimpleModalWindow.Create(ignorable: false)
 ```
 
 Which will lead you to this result:
+
 ![Preview](/images/example2.gif)
 
 ### Custom modals
@@ -94,6 +95,10 @@ InputModalWindow.Create()
                 .SetInputField((inputResult) => print("Text: " + inputResult))
                 .Show();
 ```
+
+Result:
+
+![Preview](/images/example5.gif)
 
 # Installation
 
