@@ -2,7 +2,7 @@
 Simple system for creating modal windows with callbacks in Unity, with extensible template.
 
 # In action
-## Simple modal windows
+### Simple modal windows
 This code
 
 ```C#
@@ -30,7 +30,7 @@ SimpleModalWindow.Create(ignorable: false)
 Which will lead you to this result:
 ![Preview](/images/example2.gif)
 
-## Custom modals
+### Custom modals
 
 You can make your own modal windows, for example, modal with input field creation simply as following:
 
