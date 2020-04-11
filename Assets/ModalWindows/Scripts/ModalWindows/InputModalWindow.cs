@@ -10,7 +10,7 @@ public class InputModalWindow : ModalWindow<InputModalWindow>
 
     private Action<string> onInputFieldDone;
 
-    public new InputModalWindow Create(bool ignorable)
+    public static new InputModalWindow Create(bool ignorable = true)
     {
         return ModalWindow<InputModalWindow>.Create(ignorable);
     }

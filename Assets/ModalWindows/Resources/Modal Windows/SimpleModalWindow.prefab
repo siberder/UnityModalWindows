@@ -341,7 +341,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435"
+  m_Text: Body
 --- !u!1 &3074982579898197169
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415"
+  m_Text: Header
 --- !u!1 &3074982581028623955
 GameObject:
   m_ObjectHideFlags: 0
