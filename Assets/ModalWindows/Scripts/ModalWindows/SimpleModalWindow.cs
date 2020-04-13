@@ -10,8 +10,4 @@ public class SimpleModalWindow : ModalWindow<SimpleModalWindow>
         return ModalWindow<SimpleModalWindow>.Create(ignorable);
     }
 
-    private void Update()
-    {
-        CheckIgnorableForClose();
-    }
 }

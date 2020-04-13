@@ -121,6 +121,11 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
         }
     }
 
+    protected virtual void Update()
+    {
+        CheckIgnorableForClose();
+    }
+
     protected virtual void CheckIgnorableForClose()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
