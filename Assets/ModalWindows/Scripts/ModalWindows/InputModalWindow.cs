@@ -36,12 +36,11 @@ public class InputModalWindow : ModalWindow<InputModalWindow>
         Close();
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (inputField.isFocused && inputField.text != "" && Input.GetKeyUp(KeyCode.Return))
-        {
             SubmitInput();
-        }
     }
 
     public void UI_InputFieldOKButton()

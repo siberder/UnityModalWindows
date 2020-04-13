@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,4 +9,5 @@ public class SimpleModalWindow : ModalWindow<SimpleModalWindow>
     {
         return ModalWindow<SimpleModalWindow>.Create(ignorable);
     }
+
 }
