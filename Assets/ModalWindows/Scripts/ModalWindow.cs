@@ -92,6 +92,8 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
 
         return Instance;
     }
+    
+    
 
     public virtual T SetBody(string text)
     {
@@ -116,6 +118,18 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
         if (buttons.Count == 0)
         {
             AddButton("OK");
+        }
+    }
+
+    protected virtual void CheckIgnorableForClose()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!ReferenceEquals(Instance, null))
+            {
+                if (Instance.ignorable)
+                    Instance.Close();
+            }
         }
     }
 
