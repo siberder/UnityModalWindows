@@ -10,11 +10,6 @@ public class InputModalWindow : ModalWindow<InputModalWindow>
 
     private Action<string> onInputFieldDone;
 
-    public static new InputModalWindow Create(bool ignorable = true)
-    {
-        return ModalWindow<InputModalWindow>.Create(ignorable);
-    }
-
     public InputModalWindow SetInputField(Action<string> onDone, string initialValue = "", string placeholderValue = "Type here")
     {
         inputField.text = initialValue;
@@ -36,7 +31,7 @@ public class InputModalWindow : ModalWindow<InputModalWindow>
         Close();
     }
 
-    private void Update()
+    protected void Update()
     {
         if (inputField.isFocused && inputField.text != "" && Input.GetKeyUp(KeyCode.Return))
         {

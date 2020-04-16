@@ -21,7 +21,7 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
 
     protected List<ModalWindowButton> buttons = new List<ModalWindowButton>();
 
-    bool ignorable;
+    protected bool ignorable;
     public virtual bool Ignorable 
     { 
         get => ignorable; 
@@ -82,8 +82,8 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
 
     private void Awake()
     {
-        backgroundButton.onClick.AddListener(new UnityEngine.Events.UnityAction(UI_IgnorePopup));
-        closeButton.onClick.AddListener(new UnityEngine.Events.UnityAction(UI_IgnorePopup));
+        if (backgroundButton) backgroundButton.onClick.AddListener(new UnityEngine.Events.UnityAction(UI_IgnorePopup));
+        if (closeButton) closeButton.onClick.AddListener(new UnityEngine.Events.UnityAction(UI_IgnorePopup));
     }
 
     public virtual T SetHeader(string text)
@@ -135,7 +135,7 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
         return Instance;
     }    
 
-    public void UI_IgnorePopup()
+    public virtual void UI_IgnorePopup()
     {
         if (Ignorable)
         {
@@ -143,8 +143,8 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
         }
     }    
 
-    public void ButtonPressedCallback(ModalWindowButton modalWindowButton)
+    public virtual void ButtonPressedCallback(ModalWindowButton modalWindowButton)
     {
         Close();
-    }    
+    }
 }
