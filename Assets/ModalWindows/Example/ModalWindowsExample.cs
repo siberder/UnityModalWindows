@@ -39,4 +39,14 @@ public class ModalWindowsExample : MonoBehaviour
                    .SetInputField((inputResult) => print("Text: " + inputResult), "Initial value", "It is a placeholder")
                    .Show();
     }
+
+    public void CreateToastModal()
+    {
+        ToastModalWindow.Create(ignorable: true)
+                        .SetHeader("Hey!")
+                        .SetBody("Hello there! This is a toast modal window.")
+                        .SetDelay(3f) // Set it to 0 to make popup persistent
+                        //.SetIcon(sprite) // Also you can set icon
+                        .Show();
+    }
 }

@@ -79,23 +79,6 @@ ModalWindow<InputModalWindow>.Create()
                    .Show();
 ```
 
-4. (Optional) Simplify creation by redefining `Create` method inside `InputModalWindow` class:
-```C#
-public static new InputModalWindow Create(bool ignorable = true)
-{
-    return ModalWindow<InputModalWindow>.Create(ignorable);
-}
-```
-
-So you will be able to call `Create` from it directly:
-```C#
-InputModalWindow.Create()
-                .SetHeader("Input Field Modal")
-                .SetBody("Enter something:")
-                .SetInputField((inputResult) => print("Text: " + inputResult))
-                .Show();
-```
-
 Result:
 
 ![Preview](/images/example5.gif)
@@ -109,6 +92,10 @@ Download latest `.unitypackage` release from the releases tab and import it in y
 **Option 2:**
 
 Download .zip of this repository and extract all files from `Assets/ModalWindows` to your project folder.
+
+# More windows
+### Toast
+![Preview](/images/toast.gif)
 
 # Conclusion
 Thanks for using this asset, i will be pleasured to see any feedback :)
